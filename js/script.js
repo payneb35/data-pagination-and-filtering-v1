@@ -7,7 +7,7 @@ FSJS Project 2 - Data Pagination and Filtering
 const itemsPerPage = 9;
 
 //Calling the function to add a search bar and selecting necessary elements
-let header = document.querySelector('header');
+const header = document.querySelector('header');
 addSearchBar();
 const input = document.querySelector('input#search');
 const searchButton = document.querySelector('label button');
@@ -58,7 +58,7 @@ function addPagination(list) {
          li.appendChild(button);
          linkList.insertAdjacentElement('beforeend', li);
       }
-      let currentPageButton = linkList.firstElementChild;
+      let currentPageButton = document.querySelector('ul.link-list li button');
       currentPageButton.className = 'active';
       linkList.addEventListener('click', (e) => {
          currentPageButton.classList.remove('active');
